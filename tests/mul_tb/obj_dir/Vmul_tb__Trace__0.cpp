@@ -31,10 +31,11 @@ void Vmul_tb___024root__trace_chg_0_sub_0(Vmul_tb___024root* vlSelf, VerilatedVc
                                 * vlSelfRef.mul_tb__DOT__mul__DOT__b_q)),32);
     }
     bufp->chgBit(oldp+4,(vlSelfRef.mul_tb__DOT__CLK));
-    bufp->chgIData(oldp+5,(vlSelfRef.mul_tb__DOT__A),32);
-    bufp->chgIData(oldp+6,(vlSelfRef.mul_tb__DOT__B),32);
-    bufp->chgIData(oldp+7,(vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i),32);
-    bufp->chgIData(oldp+8,(vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j),32);
+    bufp->chgBit(oldp+5,(vlSelfRef.mul_tb__DOT__rst_n));
+    bufp->chgIData(oldp+6,(vlSelfRef.mul_tb__DOT__A),32);
+    bufp->chgIData(oldp+7,(vlSelfRef.mul_tb__DOT__B),32);
+    bufp->chgIData(oldp+8,(vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i),32);
+    bufp->chgIData(oldp+9,(vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j),32);
 }
 
 void Vmul_tb___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {

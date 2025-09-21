@@ -16,6 +16,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vmul_tb___024root final : public VerilatedMod
 
     // DESIGN SPECIFIC STATE
     CData/*0:0*/ mul_tb__DOT__CLK;
+    CData/*0:0*/ mul_tb__DOT__rst_n;
     CData/*0:0*/ __Vtrigprevexpr___TOP__mul_tb__DOT__CLK__0;
     CData/*0:0*/ __VactContinue;
     IData/*31:0*/ mul_tb__DOT__A;
@@ -28,8 +29,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vmul_tb___024root final : public VerilatedMod
     IData/*31:0*/ __VactIterCount;
     VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
     VlDelayScheduler __VdlySched;
-    VlTriggerScheduler __VtrigSched_h9a771883__0;
     VlTriggerScheduler __VtrigSched_h9a7718c2__0;
+    VlTriggerScheduler __VtrigSched_h9a771883__0;
     VlTriggerVec<3> __VactTriggered;
     VlTriggerVec<3> __VnbaTriggered;
 

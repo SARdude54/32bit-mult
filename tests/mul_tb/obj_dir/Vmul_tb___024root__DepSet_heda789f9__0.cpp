@@ -8,6 +8,7 @@
 VL_ATTR_COLD void Vmul_tb___024root___eval_initial__TOP(Vmul_tb___024root* vlSelf);
 VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul_tb___024root* vlSelf);
 VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__1(Vmul_tb___024root* vlSelf);
+VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__2(Vmul_tb___024root* vlSelf);
 
 void Vmul_tb___024root___eval_initial(Vmul_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vmul_tb___024root___eval_initial\n"); );
@@ -17,20 +18,52 @@ void Vmul_tb___024root___eval_initial(Vmul_tb___024root* vlSelf) {
     Vmul_tb___024root___eval_initial__TOP(vlSelf);
     Vmul_tb___024root___eval_initial__TOP__Vtiming__0(vlSelf);
     Vmul_tb___024root___eval_initial__TOP__Vtiming__1(vlSelf);
+    Vmul_tb___024root___eval_initial__TOP__Vtiming__2(vlSelf);
     vlSelfRef.__Vtrigprevexpr___TOP__mul_tb__DOT__CLK__0 
         = vlSelfRef.mul_tb__DOT__CLK;
 }
 
-VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__1(Vmul_tb___024root* vlSelf) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vmul_tb___024root___eval_initial__TOP__Vtiming__1\n"); );
+VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul_tb___024root* vlSelf) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vmul_tb___024root___eval_initial__TOP__Vtiming__0\n"); );
+    Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Body
+    vlSelfRef.mul_tb__DOT__A = 0U;
+    vlSelfRef.mul_tb__DOT__B = 0U;
+    vlSelfRef.mul_tb__DOT__rst_n = 0U;
+    co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(posedge mul_tb.CLK)", 
+                                                         "mul_tb.sv", 
+                                                         41);
+    co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(posedge mul_tb.CLK)", 
+                                                         "mul_tb.sv", 
+                                                         42);
+    vlSelfRef.mul_tb__DOT__rst_n = 1U;
+    co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(posedge mul_tb.CLK)", 
+                                                         "mul_tb.sv", 
+                                                         44);
+    co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(posedge mul_tb.CLK)", 
+                                                         "mul_tb.sv", 
+                                                         45);
+}
+
+VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__2(Vmul_tb___024root* vlSelf) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vmul_tb___024root___eval_initial__TOP__Vtiming__2\n"); );
     Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     while (1U) {
-        co_await vlSelfRef.__VdlySched.delay(0x1388ULL, 
+        co_await vlSelfRef.__VdlySched.delay(5ULL, 
                                              nullptr, 
                                              "mul_tb.sv", 
-                                             16);
+                                             24);
         vlSelfRef.mul_tb__DOT__CLK = (1U & (~ (IData)(vlSelfRef.mul_tb__DOT__CLK)));
     }
 }
@@ -59,10 +92,16 @@ VL_INLINE_OPT void Vmul_tb___024root___nba_sequent__TOP__0(Vmul_tb___024root* vl
     Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    vlSelfRef.mul_tb__DOT__C = (vlSelfRef.mul_tb__DOT__mul__DOT__a_q 
-                                * vlSelfRef.mul_tb__DOT__mul__DOT__b_q);
-    vlSelfRef.mul_tb__DOT__mul__DOT__a_q = vlSelfRef.mul_tb__DOT__A;
-    vlSelfRef.mul_tb__DOT__mul__DOT__b_q = vlSelfRef.mul_tb__DOT__B;
+    if (vlSelfRef.mul_tb__DOT__rst_n) {
+        vlSelfRef.mul_tb__DOT__C = (vlSelfRef.mul_tb__DOT__mul__DOT__a_q 
+                                    * vlSelfRef.mul_tb__DOT__mul__DOT__b_q);
+        vlSelfRef.mul_tb__DOT__mul__DOT__a_q = vlSelfRef.mul_tb__DOT__A;
+        vlSelfRef.mul_tb__DOT__mul__DOT__b_q = vlSelfRef.mul_tb__DOT__B;
+    } else {
+        vlSelfRef.mul_tb__DOT__C = 0U;
+        vlSelfRef.mul_tb__DOT__mul__DOT__a_q = 0U;
+        vlSelfRef.mul_tb__DOT__mul__DOT__b_q = 0U;
+    }
 }
 
 void Vmul_tb___024root___timing_resume(Vmul_tb___024root* vlSelf) {
@@ -70,13 +109,13 @@ void Vmul_tb___024root___timing_resume(Vmul_tb___024root* vlSelf) {
     Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    if ((4ULL & vlSelfRef.__VactTriggered.word(0U))) {
-        vlSelfRef.__VtrigSched_h9a771883__0.resume(
-                                                   "@(negedge mul_tb.CLK)");
-    }
     if ((1ULL & vlSelfRef.__VactTriggered.word(0U))) {
         vlSelfRef.__VtrigSched_h9a7718c2__0.resume(
                                                    "@(posedge mul_tb.CLK)");
+    }
+    if ((4ULL & vlSelfRef.__VactTriggered.word(0U))) {
+        vlSelfRef.__VtrigSched_h9a771883__0.resume(
+                                                   "@(negedge mul_tb.CLK)");
     }
     if ((2ULL & vlSelfRef.__VactTriggered.word(0U))) {
         vlSelfRef.__VdlySched.resume();
@@ -88,13 +127,13 @@ void Vmul_tb___024root___timing_commit(Vmul_tb___024root* vlSelf) {
     Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    if ((! (4ULL & vlSelfRef.__VactTriggered.word(0U)))) {
-        vlSelfRef.__VtrigSched_h9a771883__0.commit(
-                                                   "@(negedge mul_tb.CLK)");
-    }
     if ((! (1ULL & vlSelfRef.__VactTriggered.word(0U)))) {
         vlSelfRef.__VtrigSched_h9a7718c2__0.commit(
                                                    "@(posedge mul_tb.CLK)");
+    }
+    if ((! (4ULL & vlSelfRef.__VactTriggered.word(0U)))) {
+        vlSelfRef.__VtrigSched_h9a771883__0.commit(
+                                                   "@(negedge mul_tb.CLK)");
     }
 }
 
@@ -157,7 +196,7 @@ void Vmul_tb___024root___eval(Vmul_tb___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vmul_tb___024root___dump_triggers__nba(vlSelf);
 #endif
-            VL_FATAL_MT("mul_tb.sv", 1, "", "NBA region did not converge.");
+            VL_FATAL_MT("mul_tb.sv", 3, "", "NBA region did not converge.");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
         __VnbaContinue = 0U;
@@ -168,7 +207,7 @@ void Vmul_tb___024root___eval(Vmul_tb___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vmul_tb___024root___dump_triggers__act(vlSelf);
 #endif
-                VL_FATAL_MT("mul_tb.sv", 1, "", "Active region did not converge.");
+                VL_FATAL_MT("mul_tb.sv", 3, "", "Active region did not converge.");
             }
             vlSelfRef.__VactIterCount = ((IData)(1U) 
                                          + vlSelfRef.__VactIterCount);

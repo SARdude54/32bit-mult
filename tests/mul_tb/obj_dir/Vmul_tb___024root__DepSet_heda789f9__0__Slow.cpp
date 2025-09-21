@@ -71,6 +71,7 @@ VL_ATTR_COLD void Vmul_tb___024root___ctor_var_reset(Vmul_tb___024root* vlSelf) 
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     vlSelf->mul_tb__DOT__CLK = VL_RAND_RESET_I(1);
+    vlSelf->mul_tb__DOT__rst_n = VL_RAND_RESET_I(1);
     vlSelf->mul_tb__DOT__A = VL_RAND_RESET_I(32);
     vlSelf->mul_tb__DOT__B = VL_RAND_RESET_I(32);
     vlSelf->mul_tb__DOT__C = VL_RAND_RESET_I(32);

@@ -6,8 +6,8 @@
 #include "Vmul_tb__Syms.h"
 #include "Vmul_tb___024root.h"
 
-VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul_tb___024root* vlSelf) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vmul_tb___024root___eval_initial__TOP__Vtiming__0\n"); );
+VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__1(Vmul_tb___024root* vlSelf) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vmul_tb___024root___eval_initial__TOP__Vtiming__1\n"); );
     Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
@@ -20,9 +20,29 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
     // Body
     vlSelfRef.mul_tb__DOT__A = 0U;
     vlSelfRef.mul_tb__DOT__B = 0U;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         50);
+    co_await vlSelfRef.__VdlySched.delay(0x14ULL, nullptr, 
+                                         "mul_tb.sv", 
+                                         70);
+    vlSelfRef.mul_tb__DOT__rst_n = 0U;
+    co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(posedge mul_tb.CLK)", 
+                                                         "mul_tb.sv", 
+                                                         71);
+    co_await vlSelfRef.__VdlySched.delay(0x14ULL, nullptr, 
+                                         "mul_tb.sv", 
+                                         72);
+    vlSelfRef.mul_tb__DOT__rst_n = 1U;
+    co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(posedge mul_tb.CLK)", 
+                                                         "mul_tb.sv", 
+                                                         73);
+    co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
+                                                         nullptr, 
+                                                         "@(posedge mul_tb.CLK)", 
+                                                         "mul_tb.sv", 
+                                                         74);
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 1U;
     __Vtask_mul_tb__DOT__send_and_check__0__A_test = 1U;
     __Vtask_mul_tb__DOT__send_and_check__0__expected 
@@ -32,33 +52,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
@@ -70,33 +90,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
@@ -108,33 +128,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
@@ -146,33 +166,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
@@ -184,33 +204,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
@@ -222,33 +242,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
@@ -260,33 +280,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
@@ -298,33 +318,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
@@ -336,33 +356,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
@@ -374,33 +394,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 2U;
@@ -413,33 +433,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
@@ -451,33 +471,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
@@ -489,33 +509,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
@@ -527,33 +547,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
@@ -565,33 +585,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
@@ -603,33 +623,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
@@ -641,33 +661,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
@@ -679,33 +699,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
@@ -717,33 +737,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
@@ -755,33 +775,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 3U;
@@ -794,33 +814,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
@@ -832,33 +852,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
@@ -870,33 +890,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
@@ -908,33 +928,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
@@ -946,33 +966,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
@@ -984,33 +1004,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
@@ -1022,33 +1042,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
@@ -1060,33 +1080,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
@@ -1098,33 +1118,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
@@ -1136,33 +1156,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 4U;
@@ -1175,33 +1195,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
@@ -1213,33 +1233,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
@@ -1251,33 +1271,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
@@ -1289,33 +1309,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
@@ -1327,33 +1347,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
@@ -1365,33 +1385,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
@@ -1403,33 +1423,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
@@ -1441,33 +1461,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
@@ -1479,33 +1499,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
@@ -1517,33 +1537,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 5U;
@@ -1556,33 +1576,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
@@ -1594,33 +1614,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
@@ -1632,33 +1652,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
@@ -1670,33 +1690,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
@@ -1708,33 +1728,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
@@ -1746,33 +1766,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
@@ -1784,33 +1804,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
@@ -1822,33 +1842,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
@@ -1860,33 +1880,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
@@ -1898,33 +1918,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 6U;
@@ -1937,33 +1957,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
@@ -1975,33 +1995,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
@@ -2013,33 +2033,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
@@ -2051,33 +2071,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
@@ -2089,33 +2109,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
@@ -2127,33 +2147,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
@@ -2165,33 +2185,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
@@ -2203,33 +2223,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
@@ -2241,33 +2261,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
@@ -2279,33 +2299,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 7U;
@@ -2318,33 +2338,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
@@ -2356,33 +2376,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
@@ -2394,33 +2414,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
@@ -2432,33 +2452,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
@@ -2470,33 +2490,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
@@ -2508,33 +2528,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
@@ -2546,33 +2566,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
@@ -2584,33 +2604,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
@@ -2622,33 +2642,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
@@ -2660,33 +2680,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 8U;
@@ -2699,33 +2719,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
@@ -2737,33 +2757,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
@@ -2775,33 +2795,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
@@ -2813,33 +2833,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
@@ -2851,33 +2871,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
@@ -2889,33 +2909,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
@@ -2927,33 +2947,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
@@ -2965,33 +2985,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
@@ -3003,33 +3023,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
@@ -3041,33 +3061,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 9U;
@@ -3080,33 +3100,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
@@ -3118,33 +3138,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
@@ -3156,33 +3176,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
@@ -3194,33 +3214,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
@@ -3232,33 +3252,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
@@ -3270,33 +3290,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
@@ -3308,33 +3328,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
@@ -3346,33 +3366,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
@@ -3384,33 +3404,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
@@ -3422,33 +3442,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 0xaU;
@@ -3461,33 +3481,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
@@ -3499,33 +3519,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
@@ -3537,33 +3557,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
@@ -3575,33 +3595,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
@@ -3613,33 +3633,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
@@ -3651,33 +3671,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
@@ -3689,33 +3709,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
@@ -3727,33 +3747,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
@@ -3765,33 +3785,33 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
     __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
@@ -3803,38 +3823,41 @@ VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         32);
+                                                         51);
     vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
     vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         37);
+                                                         56);
     co_await vlSelfRef.__VtrigSched_h9a7718c2__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         38);
+                                                         57);
     co_await vlSelfRef.__VtrigSched_h9a771883__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(negedge mul_tb.CLK)", 
                                                          "mul_tb.sv", 
-                                                         39);
+                                                         58);
     if (VL_UNLIKELY(((vlSelfRef.mul_tb__DOT__C != __Vtask_mul_tb__DOT__send_and_check__0__expected)))) {
-        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:42: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
-                     64,VL_TIME_UNITED_Q(1000),-9,vlSymsp->name(),
-                     64,VL_TIME_UNITED_Q(1000),-9,32,
+        VL_WRITEF_NX("[%0t] %%Error: mul_tb.sv:61: Assertion failed in %Nmul_tb.send_and_check: [%0t] Mismatch: A=%0# B=%0# C=%0# exp=%0#\n",0,
+                     64,VL_TIME_UNITED_Q(1),-12,vlSymsp->name(),
+                     64,VL_TIME_UNITED_Q(1),-12,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__A_test,
                      32,__Vtask_mul_tb__DOT__send_and_check__0__B_test,
                      32,vlSelfRef.mul_tb__DOT__C,32,
                      __Vtask_mul_tb__DOT__send_and_check__0__expected);
-        VL_STOP_MT("mul_tb.sv", 42, "");
+        VL_STOP_MT("mul_tb.sv", 61, "");
     }
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
     vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 0xbU;
     VL_WRITEF_NX("Test Complete\n",0);
-    VL_FINISH_MT("mul_tb.sv", 59, "");
+    co_await vlSelfRef.__VdlySched.delay(0x32ULL, nullptr, 
+                                         "mul_tb.sv", 
+                                         83);
+    VL_FINISH_MT("mul_tb.sv", 84, "");
 }
 
 #ifdef VL_DEBUG

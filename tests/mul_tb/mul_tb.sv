@@ -1,15 +1,23 @@
+`timescale 1ps/1ps
+
 module mul_tb;
 
 logic CLK;
+logic rst_n;
 logic [31:0] A;
 logic [31:0] B;
 logic [31:0] C;
 
 mul mul(
     .CLK(CLK),
+    .rst_n(rst_n),
     .A(A),
     .B(B),
     .C(C)
+    `ifdef USE_POWER_PINS
+            , .VPWR(VPWR)
+            , .VGND(VGND)
+    `endif
 );
 
 initial CLK = 0;
@@ -26,16 +34,27 @@ function automatic [31:0] mul_ref(input [31:0] A, input [31:0] B);
     return A * B;
 endfunction
 
+initial begin
+    A = '0;
+    B = '0;
+    rst_n = 0;
+    @(posedge CLK);
+    @(posedge CLK);
+    rst_n = 1;
+    @(posedge CLK);
+    @(posedge CLK);
+end
+
 task automatic send_and_check(input logic [31:0] A_test, input logic [31:0] B_test);
     logic [31:0] expected = 32'(A_test) * 32'(B_test);
-
+ 
     @(negedge CLK);
 
     A = A_test;
     B = B_test;
 
-    @(posedge CLK); // capture inputs
-    @(posedge CLK); // product registered  to C
+    @(posedge CLK);
+    @(posedge CLK);
     @(negedge CLK);
 
     if(C != expected)
@@ -47,7 +66,12 @@ initial begin
 
     A = '0;
     B = '0;
-    #1;
+    
+    #20 rst_n = 0;
+    @(posedge CLK); 
+    #20 rst_n = 1;
+    @(posedge CLK); 
+    @(posedge CLK);
 
     for(int i = 1; i <= 10; i++) begin
         for (int j = 1; j <= 10; j++) begin
@@ -56,6 +80,7 @@ initial begin
     end
 
     $display("Test Complete");
+    #50
     $finish;
 
 end
