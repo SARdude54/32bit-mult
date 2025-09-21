@@ -43,7 +43,7 @@ Vmul_tb__Syms::Vmul_tb__Syms(VerilatedContext* contextp, const char* namep, Vmul
     , TOP{this, namep}
 {
         // Check resources
-        Verilated::stackCheck(19);
+        Verilated::stackCheck(23);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-9);
     _vm_contextp__->timeprecision(-12);

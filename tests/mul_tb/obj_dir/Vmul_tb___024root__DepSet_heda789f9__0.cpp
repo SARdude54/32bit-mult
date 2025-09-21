@@ -7,6 +7,7 @@
 
 VL_ATTR_COLD void Vmul_tb___024root___eval_initial__TOP(Vmul_tb___024root* vlSelf);
 VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul_tb___024root* vlSelf);
+VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__1(Vmul_tb___024root* vlSelf);
 
 void Vmul_tb___024root___eval_initial(Vmul_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vmul_tb___024root___eval_initial\n"); );
@@ -14,939 +15,24 @@ void Vmul_tb___024root___eval_initial(Vmul_tb___024root* vlSelf) {
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
     Vmul_tb___024root___eval_initial__TOP(vlSelf);
-    vlSelfRef.__Vm_traceActivity[1U] = 1U;
     Vmul_tb___024root___eval_initial__TOP__Vtiming__0(vlSelf);
+    Vmul_tb___024root___eval_initial__TOP__Vtiming__1(vlSelf);
+    vlSelfRef.__Vtrigprevexpr___TOP__mul_tb__DOT__CLK__0 
+        = vlSelfRef.mul_tb__DOT__CLK;
 }
 
-VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__0(Vmul_tb___024root* vlSelf) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vmul_tb___024root___eval_initial__TOP__Vtiming__0\n"); );
+VL_INLINE_OPT VlCoroutine Vmul_tb___024root___eval_initial__TOP__Vtiming__1(Vmul_tb___024root* vlSelf) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vmul_tb___024root___eval_initial__TOP__Vtiming__1\n"); );
     Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Init
-    IData/*31:0*/ __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 0;
-    IData/*31:0*/ __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0;
     // Body
-    vlSelfRef.mul_tb__DOT__A = 0U;
-    vlSelfRef.mul_tb__DOT__B = 0U;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         39);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 1U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 1U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 1U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 1U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 1U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 1U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 1U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 1U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 1U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 1U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 1U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 1U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 2U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 2U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 2U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 2U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 2U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 2U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 2U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 2U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 2U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 2U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 1U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 3U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 3U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 3U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 3U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 3U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 3U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 3U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 3U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 3U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 3U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 1U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 4U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 4U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 4U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 4U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 4U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 4U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 4U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 4U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 4U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 4U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 1U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 5U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 5U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 5U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 5U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 5U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 5U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 5U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 5U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 5U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 5U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 1U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 6U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 6U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 6U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 6U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 6U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 6U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 6U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 6U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 6U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 6U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 1U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 7U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 7U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 7U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 7U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 7U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 7U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 7U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 7U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 7U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 7U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 1U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 8U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 8U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 8U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 8U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 8U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 8U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 8U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 8U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 8U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 8U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 1U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 9U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 9U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 9U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 9U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 9U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 9U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 9U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 9U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 9U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 9U;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 1U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 0xaU;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 2U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 0xaU;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 3U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 0xaU;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 4U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 0xaU;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 5U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 0xaU;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 6U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 0xaU;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 7U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 0xaU;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 8U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 0xaU;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 9U;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 0xaU;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__B_test = 0xaU;
-    __Vtask_mul_tb__DOT__send_and_check__0__A_test = 0xaU;
-    vlSelfRef.mul_tb__DOT__A = __Vtask_mul_tb__DOT__send_and_check__0__A_test;
-    vlSelfRef.mul_tb__DOT__B = __Vtask_mul_tb__DOT__send_and_check__0__B_test;
-    co_await vlSelfRef.__VdlySched.delay(0x3e8ULL, 
-                                         nullptr, "mul_tb.sv", 
-                                         30);
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__unnamedblk2__DOT__j = 0xbU;
-    vlSelfRef.mul_tb__DOT__unnamedblk1__DOT__i = 0xbU;
-    VL_WRITEF_NX("Test Complete\n",0);
-    VL_FINISH_MT("mul_tb.sv", 48, "");
-    vlSelfRef.__Vm_traceActivity[2U] = 1U;
+    while (1U) {
+        co_await vlSelfRef.__VdlySched.delay(0x1388ULL, 
+                                             nullptr, 
+                                             "mul_tb.sv", 
+                                             16);
+        vlSelfRef.mul_tb__DOT__CLK = (1U & (~ (IData)(vlSelfRef.mul_tb__DOT__CLK)));
+    }
 }
 
 void Vmul_tb___024root___eval_act(Vmul_tb___024root* vlSelf) {
@@ -955,10 +41,28 @@ void Vmul_tb___024root___eval_act(Vmul_tb___024root* vlSelf) {
     auto& vlSelfRef = std::ref(*vlSelf).get();
 }
 
+void Vmul_tb___024root___nba_sequent__TOP__0(Vmul_tb___024root* vlSelf);
+
 void Vmul_tb___024root___eval_nba(Vmul_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vmul_tb___024root___eval_nba\n"); );
     Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Body
+    if ((1ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
+        Vmul_tb___024root___nba_sequent__TOP__0(vlSelf);
+        vlSelfRef.__Vm_traceActivity[1U] = 1U;
+    }
+}
+
+VL_INLINE_OPT void Vmul_tb___024root___nba_sequent__TOP__0(Vmul_tb___024root* vlSelf) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vmul_tb___024root___nba_sequent__TOP__0\n"); );
+    Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Body
+    vlSelfRef.mul_tb__DOT__C = (vlSelfRef.mul_tb__DOT__mul__DOT__a_q 
+                                * vlSelfRef.mul_tb__DOT__mul__DOT__b_q);
+    vlSelfRef.mul_tb__DOT__mul__DOT__a_q = vlSelfRef.mul_tb__DOT__A;
+    vlSelfRef.mul_tb__DOT__mul__DOT__b_q = vlSelfRef.mul_tb__DOT__B;
 }
 
 void Vmul_tb___024root___timing_resume(Vmul_tb___024root* vlSelf) {
@@ -966,8 +70,31 @@ void Vmul_tb___024root___timing_resume(Vmul_tb___024root* vlSelf) {
     Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
+    if ((4ULL & vlSelfRef.__VactTriggered.word(0U))) {
+        vlSelfRef.__VtrigSched_h9a771883__0.resume(
+                                                   "@(negedge mul_tb.CLK)");
+    }
     if ((1ULL & vlSelfRef.__VactTriggered.word(0U))) {
+        vlSelfRef.__VtrigSched_h9a7718c2__0.resume(
+                                                   "@(posedge mul_tb.CLK)");
+    }
+    if ((2ULL & vlSelfRef.__VactTriggered.word(0U))) {
         vlSelfRef.__VdlySched.resume();
+    }
+}
+
+void Vmul_tb___024root___timing_commit(Vmul_tb___024root* vlSelf) {
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vmul_tb___024root___timing_commit\n"); );
+    Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Body
+    if ((! (4ULL & vlSelfRef.__VactTriggered.word(0U)))) {
+        vlSelfRef.__VtrigSched_h9a771883__0.commit(
+                                                   "@(negedge mul_tb.CLK)");
+    }
+    if ((! (1ULL & vlSelfRef.__VactTriggered.word(0U)))) {
+        vlSelfRef.__VtrigSched_h9a7718c2__0.commit(
+                                                   "@(posedge mul_tb.CLK)");
     }
 }
 
@@ -978,10 +105,11 @@ bool Vmul_tb___024root___eval_phase__act(Vmul_tb___024root* vlSelf) {
     Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
-    VlTriggerVec<1> __VpreTriggered;
+    VlTriggerVec<3> __VpreTriggered;
     CData/*0:0*/ __VactExecute;
     // Body
     Vmul_tb___024root___eval_triggers__act(vlSelf);
+    Vmul_tb___024root___timing_commit(vlSelf);
     __VactExecute = vlSelfRef.__VactTriggered.any();
     if (__VactExecute) {
         __VpreTriggered.andNot(vlSelfRef.__VactTriggered, vlSelfRef.__VnbaTriggered);

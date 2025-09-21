@@ -11,6 +11,7 @@ VL_ATTR_COLD void Vmul_tb___024root___eval_initial__TOP(Vmul_tb___024root* vlSel
     Vmul_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
+    vlSelfRef.mul_tb__DOT__CLK = 0U;
     vlSymsp->_vm_contextp__->dumpfile(std::string{"wave.vcd"});
     vlSymsp->_traceDumpOpen();
 }
