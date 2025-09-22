@@ -18,6 +18,14 @@ bin_mult DUT(
 initial CLK = 0;
 always #5 CLK = ~CLK;
 
+
+initial begin
+    if ($test$plusargs("dump") || 1) begin
+        $dumpfile("wave.vcd");
+        $dumpvars(0, mul_tb);
+    end
+end
+
 initial begin
     A = '0;
     B = '0;
@@ -25,6 +33,17 @@ initial begin
     repeat (4) @(posedge CLK);
     rst_n = 1;
     repeat (2) @(posedge CLK);
+end
+
+initial begin
+    wait (rst_n == 1);
+    repeat (2) @(posedge CLK);
+    A = 2;
+    B = 2;
+
+    $display("Test complete");
+    #50
+    $finish;
 end
 
 endmodule
