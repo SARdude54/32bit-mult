@@ -18,7 +18,7 @@ bin_mult DUT(
 initial CLK = 0;
 always #5 CLK = ~CLK;
 
-
+// dump waveform block
 initial begin
     if ($test$plusargs("dump") || 1) begin
         $dumpfile("wave.vcd");
@@ -26,6 +26,7 @@ initial begin
     end
 end
 
+// reset block
 initial begin
     A = '0;
     B = '0;
@@ -35,11 +36,22 @@ initial begin
     repeat (2) @(posedge CLK);
 end
 
+// test block - test some values
 initial begin
+
     wait (rst_n == 1);
+
     repeat (2) @(posedge CLK);
     A = 2;
     B = 2;
+
+    repeat (2) @(posedge CLK);
+    A = 8;
+    B = 9;
+
+    repeat (2) @(posedge CLK);
+    A = 100;
+    B = 100;
 
     $display("Test complete");
     #50
