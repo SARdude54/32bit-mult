@@ -17,7 +17,6 @@ generate
     always_ff @( posedge CLK ) begin
 
         if (!rst_n) begin
-            partial_prod <= 64'b0;
             temp_prod <= 64'b0;
 
         end else begin
@@ -26,7 +25,6 @@ generate
             next_sum = 64'b0;
 
             for (int i = 0; i < 32; i++) begin
-                reg [63:0] partial_prod;
                 partial_prod[31:0] = A & {32{B[i]}}; // calc partial product
                 partial_prod[63:32] = 32'b0; // save partial and pad zeros
                 next_sum += (partial_prod << i); // accuumulate to prev sum for next partial product
