@@ -66,6 +66,48 @@ async def simple_test(dut):
 
     assert got == expected, f"3*7: got 0x{got:016x}, exp {expected:016x}"
 
+# @cocotb.test()
+# async def neg_val_test1(dut, n_tests=200):
+
+#     cocotb.start_soon(Clock(dut.CLK, 10, units='ns').start())
+#     await reset_dut(dut)
+#     await RisingEdge(dut.CLK)
+
+#     A = -6
+#     B = 7
+
+#     dut.A.value = A
+#     dut.B.value = B
+
+#     await ClockCycles(dut.CLK, LATENCY)
+
+#     got= int(dut.C.value)
+#     expected = ref_mul(A, B)
+
+#     assert got == expected, f"3*7: got 0x{got:016x}, exp {expected:016x}"
+
+
+# @cocotb.test()
+# async def neg_val_test2(dut, n_tests=200):
+
+#     cocotb.start_soon(Clock(dut.CLK, 10, units='ns').start())
+#     await reset_dut(dut)
+#     await RisingEdge(dut.CLK)
+
+#     A = -6
+#     B = -7
+
+#     dut.A.value = A
+#     dut.B.value = B
+
+#     await ClockCycles(dut.CLK, LATENCY)
+
+#     got= int(dut.C.value)
+#     expected = ref_mul(A, B)
+
+#     assert got == expected, f"3*7: got 0x{got:016x}, exp {expected:016x}"
+
+
 @cocotb.test()
 async def random_test(dut, n_tests=200):
 
@@ -82,4 +124,5 @@ async def random_test(dut, n_tests=200):
         got = int(dut.C.value)
         expected = ref_mul(a, b)
         assert got == expected, f"[{i}] A=0x{a:08x} B=0x{b:08x} got=0x{got:016x} exp=0x{expected:016x}"
+
 
