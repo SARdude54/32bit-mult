@@ -51,7 +51,6 @@ async def simple_test(dut):
     
     cocotb.start_soon(Clock(dut.CLK, 10, units='ns').start())
     await reset_dut(dut)
-
     await RisingEdge(dut.CLK)
 
     A = 6
@@ -66,4 +65,21 @@ async def simple_test(dut):
     expected = ref_mul(A, B)
 
     assert got == expected, f"3*7: got 0x{got:016x}, exp {expected:016x}"
+
+@cocotb.test()
+async def random_test(dut, n_tests=200):
+
+    cocotb.start_soon(Clock(dut.CLK, 10, units='ns').start())
+    await reset_dut(dut)
+
+    rng = random.Random(0xD0D0)
+    for i in range(n_tests):
+        a = rng.getrandbits(32)
+        b = rng.getrandbits(32)
+        dut.A.value = a
+        dut.B.value = b
+        await ClockCycles(dut.CLK, LATENCY)
+        got = int(dut.C.value)
+        expected = ref_mul(a, b)
+        assert got == expected, f"[{i}] A=0x{a:08x} B=0x{b:08x} got=0x{got:016x} exp=0x{expected:016x}"
 
