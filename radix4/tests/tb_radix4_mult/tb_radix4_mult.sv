@@ -7,12 +7,17 @@ logic rst_n;
 logic [31:0] A, B;
 logic [63:0] C;
 
+logic valid_out;
+logic valid_in;
+
 radix4_mult DUT(
     .CLK(CLK),
     .rst_n(rst_n),
+    .valid_in(valid_in),
     .A(A),
     .B(B),
-    .C(C)
+    .C(C),
+    .valid_out(valid_out)
 );
 
 initial CLK = 0;
@@ -31,42 +36,28 @@ initial begin
     A = '0;
     B = '0;
     rst_n = 0;
+    valid_in = 0;
     repeat (4) @(posedge CLK);
     rst_n = 1;
     repeat (2) @(posedge CLK);
 end
 
-task automatic send_and_check(input logic [31:0] A_test, input logic [31:0] B_test);
-    logic [63:0] expected = 32'(A_test) * 32'(B_test);
-
-    @(negedge CLK);
-
-    A = A_test;
-    B = B_test;
-
-    @(posedge CLK);
-    @(posedge CLK);
-    @(negedge CLK);
-
-    if(C != expected)
-        $error("[%0t] Mismatch: A=%0d B=%0d C=%0d exp=%0d", $time, A_test, B_test, C, expected);
-
-endtask
-
-// test block - test some values
 initial begin
-
     wait (rst_n == 1);
+    A = 100;
+    B = 100;
+    valid_in = 1;
+    repeat (16) @(posedge CLK);
+    valid_in = 0;
 
-    repeat (2) @(posedge CLK);
-    send_and_check(100, 100);
+    wait (valid_out == 1);
+    
+    assert (C == 10000) else $error("Incorrect Result");
 
-    repeat (2) @(posedge CLK);
 
     $display("Test complete");
-    #500
+    #50;
     $finish;
 end
-
 endmodule
 
