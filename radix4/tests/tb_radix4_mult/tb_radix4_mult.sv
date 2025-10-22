@@ -1,6 +1,6 @@
 `timescale 1ps/1ps
 
-module bin_mult_tb;
+module tb_radix4_mult;
 
 logic CLK;
 logic rst_n;
@@ -22,7 +22,7 @@ always #5 CLK = ~CLK;
 initial begin
     if ($test$plusargs("dump") || 1) begin
         $dumpfile("wave.vcd");
-        $dumpvars(0, radix4_mult);
+        $dumpvars(0, tb_radix4_mult);
     end
 end
 
@@ -36,25 +36,35 @@ initial begin
     repeat (2) @(posedge CLK);
 end
 
+task automatic send_and_check(input logic [31:0] A_test, input logic [31:0] B_test);
+    logic [63:0] expected = 32'(A_test) * 32'(B_test);
+
+    @(negedge CLK);
+
+    A = A_test;
+    B = B_test;
+
+    @(posedge CLK);
+    @(posedge CLK);
+    @(negedge CLK);
+
+    if(C != expected)
+        $error("[%0t] Mismatch: A=%0d B=%0d C=%0d exp=%0d", $time, A_test, B_test, C, expected);
+
+endtask
+
 // test block - test some values
 initial begin
 
     wait (rst_n == 1);
 
     repeat (2) @(posedge CLK);
-    A = 2;
-    B = 2;
+    send_and_check(100, 100);
 
     repeat (2) @(posedge CLK);
-    A = 8;
-    B = 9;
-
-    repeat (2) @(posedge CLK);
-    A = 100;
-    B = 100;
 
     $display("Test complete");
-    #50
+    #500
     $finish;
 end
 
