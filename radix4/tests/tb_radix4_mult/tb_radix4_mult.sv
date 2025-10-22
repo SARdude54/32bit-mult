@@ -4,8 +4,8 @@ module tb_radix4_mult;
 
 logic CLK;
 logic rst_n;
-logic [31:0] A, B;
-logic [63:0] C;
+logic signed [31:0] A, B;
+logic signed [63:0] C;
 
 logic valid_out;
 logic valid_in;
@@ -39,20 +39,26 @@ initial begin
     valid_in = 0;
     repeat (4) @(posedge CLK);
     rst_n = 1;
+    A = '0;
+    B = '0;
+    valid_in = '0;
     repeat (2) @(posedge CLK);
 end
 
 initial begin
+    logic signed [63:0] expected;
     wait (rst_n == 1);
     A = 100;
     B = 100;
+    expected = A * B;
+
     valid_in = 1;
     repeat (16) @(posedge CLK);
     valid_in = 0;
 
     wait (valid_out == 1);
     
-    assert (C == 10000) else $error("Incorrect Result");
+    assert (C == expected) else $error("Incorrect: A=%0d B=%0d C=%0d, expected=%0d", A, B, C, expected);
 
 
     $display("Test complete");
