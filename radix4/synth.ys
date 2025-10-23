@@ -1,0 +1,14 @@
+# Read  RTL source files
+read_verilog -sv rtl/counter.sv
+read_verilog -sv rtl/radix4_mult.sv
+
+# Set top module
+hierarchy -top radix4_mult
+
+# Generic synthesis
+proc; opt; fsm; opt; memory; opt
+techmap; opt
+
+# Write out synthesized results
+write_verilog -noattr build/radix4_mult_netlist.v
+show radix4_mult -colors 2 -stretch
