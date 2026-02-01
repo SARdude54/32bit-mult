@@ -5,7 +5,11 @@ RTL_SRCS 	:= $(shell find rtl -name '*.sv' -or -name '*.v')
 INCLUDE_DIRS := $(sort $(dir $(shell find . -name '*.svh')))
 RTL_DIRS	 := $(sort $(dir $(RTL_SRCS)))
 # Include both Include and RTL directories for linting
-LINT_INCLUDES := $(foreach dir, $(INCLUDE_DIRS) $(RTL_DIRS), -I$(realpath $(dir))) -I$(PDKPATH) 
+LINT_INCLUDES := $(foreach dir, $(INCLUDE_DIRS) $(RTL_DIRS), -I$(realpath $(dir)))
+ifneq ($(strip $(PDKPATH)),)
+LINT_INCLUDES += -I$(PDKPATH)
+endif
+
 
 TEST_DIR = ./tests
 TEST_SUBDIRS = $(shell cd $(TEST_DIR) && ls -d */ | grep -v "__pycache__" )
@@ -15,7 +19,7 @@ TESTS = $(TEST_SUBDIRS:/=)
 LINTER := verilator
 SIMULATOR := verilator
 SIMULATOR_ARGS := --binary --timing --trace --trace-structs \
-	--assert --timescale 1ns --quiet  
+	--assert --timescale 1ns  
 SIMULATOR_BINARY := ./obj_dir/V*
 SIMULATOR_SRCS := *.sv
 # Optional use of Icarus as Linter and Simulator
@@ -24,13 +28,13 @@ SIMULATOR := iverilog
 SIMULATOR_ARGS := -g2012
 SIMULATOR_BINARY := a.out
 SIMULATOR_SRCS := $(foreach src, $(RTL_SRCS), $(realpath $(src))) *.sv
-SIM_TOP := `$(shell pwd)/scripts/top.sh -s`
+SIM_TOP := $(shell bash $(shell pwd)/scripts/top.sh -s)
 # LINT_INCLUDES := ""
 endif
 # Gate Level Verification
 ifdef GL
 SIMULATOR := iverilog
-LINT_INCLUDES := -I$(PDKPATH) -I$(realpath gl)
+LINT_INCLUDES := $(foreach dir, $(INCLUDE_DIRS) $(RTL_DIRS), -I$(realpath $(dir)))
 SIMULATOR_ARGS := -g2012 -DFUNCTIONAL -DUSE_POWER_PINS 
 SIMULATOR_BINARY := a.out
 SIMULATOR_SRCS = $(realpath gl)/* *.sv
@@ -99,7 +103,7 @@ $(TESTS):
 
 # Build With Simulator
 	@cd $(TEST_DIR)/$@;\
-		$(SIMULATOR) $(SIMULATOR_ARGS) $(SIMULATOR_SRCS) $(LINT_INCLUDES) $(SIM_TOP) > build.log
+		$(SIMULATOR) $(SIMULATOR_ARGS) $(LINT_INCLUDES) $(SIM_TOP) $(SIMULATOR_SRCS) > build.log
 	
 	@printf "\n$(BOLD) Running... $(RESET)\n"
 
