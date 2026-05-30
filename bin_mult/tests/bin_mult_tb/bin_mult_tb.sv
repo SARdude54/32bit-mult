@@ -22,7 +22,7 @@ always #5 CLK = ~CLK;
 initial begin
     if ($test$plusargs("dump") || 1) begin
         $dumpfile("wave.vcd");
-        $dumpvars(0, mul_tb);
+        $dumpvars(0, bin_mult_tb);
     end
 end
 
