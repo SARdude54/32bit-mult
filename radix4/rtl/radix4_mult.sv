@@ -1,7 +1,7 @@
 `timescale 1ps/1ps
 
 module radix4_mult (
-    input logic CLK,
+    input logic clk,
     input logic rst_n,
 
     input logic vld_in,
@@ -37,14 +37,14 @@ reg valid;
 // counter to track sums
 reg [3:0] count;
 counter group_counter(
-    .clk(CLK),
+    .clk(clk),
     .en(valid),
     .clr(start || !rst_n),
     .count(count)
 );
 
 // save inputs register
-always_ff @( posedge CLK ) begin
+always_ff @( posedge clk ) begin
     if (!rst_n) begin
         a_reg <= 0; b_reg <= 0;
     end else if (start) begin
@@ -74,7 +74,7 @@ always_comb begin
 end
 
 // sum register
-always_ff @(posedge CLK) begin
+always_ff @(posedge clk) begin
   if (!rst_n) begin
     sum     <= 64'sd0;
     vld_out <= 1'b0;
