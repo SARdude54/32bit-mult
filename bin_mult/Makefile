@@ -15,7 +15,8 @@ TESTS = $(TEST_SUBDIRS:/=)
 LINTER := verilator
 SIMULATOR := verilator
 SIMULATOR_ARGS := --binary --timing --trace --trace-structs \
-	--assert --timescale 1ns --quiet  
+	--assert --timescale 1ns \
+	-CFLAGS "-std=c++20 -fcoroutines"
 SIMULATOR_BINARY := ./obj_dir/V*
 SIMULATOR_SRCS := *.sv
 # Optional use of Icarus as Linter and Simulator

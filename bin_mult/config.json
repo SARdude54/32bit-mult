@@ -1,0 +1,23 @@
+{
+    "DESIGN_NAME": "bin_mult",
+    "VERILOG_FILES": "dir::rtl/*.sv",
+
+    "CLOCK_PERIOD": 50,
+    "CLOCK_PORT": "clk",
+
+    "PNR_SDC_FILE": "dir::constraints/bin_mult.sdc",
+    "SIGNOFF_SDC_FILE": "dir::constraints/bin_mult.sdc",
+
+    "FP_CORE_UTIL": 25,
+    "PL_TARGET_DENSITY": 0.35,
+
+    "FP_PIN_ORDER_CFG": "dir::constraints/pin_order.cfg",
+    "FP_IO_MODE": 0,
+
+    "RUN_POST_GRT_RESIZER_TIMING": true,
+    "RUN_POST_GRT_DESIGN_REPAIR": true,
+
+    "GRT_ANTENNA_ITERS": 20,
+
+    "SYNTH_AUTONAME": true
+}
