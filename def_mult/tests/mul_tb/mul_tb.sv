@@ -6,7 +6,7 @@ logic CLK;
 logic rst_n;
 logic [31:0] A;
 logic [31:0] B;
-logic [31:0] C;
+logic [63:0] C;
 
 `ifdef USE_POWER_PINS
   supply1 VPWR, VPB;
