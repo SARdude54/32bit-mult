@@ -40,6 +40,48 @@ This project implements and verifies a 32-bit radix-4 multiplier in SystemVerilo
 ### OpenLane Configuration
 ### Data Collection
 
+1. Use `collect_metrics.py` to parse through an openlane run and gather essential metrics. 
+
+* Default run on a single run:
+    ```python3 scripts/collect_metrics.py runs/recent```
+
+    or 
+
+    ```    
+    python3 scripts/collect_metrics.py \
+        --design default:def_mult/runs/recent \
+        --design radix4:radix4/runs/recent \
+        --design bin_mult:bin_mult/runs/recent \
+        --out-csv results/metrics_summary.csv \
+        --out-json results/metrics_summary.json
+    ```
+
+    * Use `--name default_mul` to label which multiplication algorithm
+    * Use `--summary` to write a summary after writing CSV or JSON
+
+
+2. Use `plot_metrics.py` to plot `collect_metrics.py` results 
+    ```
+    python3 scripts/plot_metrics.py results/metrics_summary.csv
+    ```
+
+    * Use `--out-dir` to specifify output directory. Defaults to `results/plots`
+    * Use ```--format``` to specify output format. Only PDF, PNG, or SVG. 
+        * For example: 
+            ```
+            python3 scripts/plot_metrics.py results/metrics_summary.csv \
+            --out-dir paper/figures \
+            --format pdf
+            ```
+    * Use `--dpi` sets the resolution used for raster format. Dedfaults to 300
+        * For example:
+
+            ```
+            python3 scripts/plot_metrics.py results/metrics_summary.csv \
+            --format png \
+            --dpi 600
+            ```
+
 ## Debugging
 ### Debugging Antenna Violations
 
