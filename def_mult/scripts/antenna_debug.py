@@ -1,17 +1,4 @@
 #!/usr/bin/env python3
-"""
-antenna_debug.py
-
-Summarize antenna violations from an OpenLane run directory.
-
-Usage:
-    python3 scripts/antenna_debug.py runs/RUN_2026-06-17_21-29-12
-
-Optional:
-    python3 scripts/antenna_debug.py runs/RUN_2026-06-17_21-29-12 --show-clean
-    python3 scripts/antenna_debug.py runs/RUN_2026-06-17_21-29-12 --net _01566_
-    python3 scripts/antenna_debug.py runs/RUN_2026-06-17_21-29-12 --out antenna_debug.txt
-"""
 
 from __future__ import annotations
 

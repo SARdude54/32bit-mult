@@ -38,7 +38,29 @@ This project implements and verifies a 32-bit radix-4 multiplier in SystemVerilo
 
 ## Toolchain Setup
 ### OpenLane Configuration
-## Useful Commands
+### Data Collection
+
+## Debugging
+### Debugging Antenna Violations
+
+Use `antenna_debug.py` to review antenna violation information for debugging. 
+
+* Default Run:
+
+    ```
+    python3 scripts/antenna_debug.py runs/<RUN>
+    ```
+
+    Writes report to default path: `runs/<RUN>/antenna_debug_summary.txt`
+* Use `--show-clean` to include steps where antenna violations are zero. This can be useful to show a timeline of where violaions appeared or repaired. 
+
+* Use `--net <NET>` to report around a specific net
+    * Ex: `python3 scripts/antenna_debug.py runs/RUN_2026-06-17_21-29-12 --net _01566_` will only include antenna reports that mention `_01566_`, Additionally, it will also mention the net-context section searches for `_01566_` in DEF, Verilog, and antenna logs.
+
+
+* Use `--out <DIR>` to write the report to a specific directory. 
+
+
 
 ## Multiplier Results
 ### Default Multiplication
