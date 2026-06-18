@@ -14,7 +14,7 @@ Currently, this project has three different implementations:
 * `Icarus Verilog` - 4-state RTL simulation
 * `CocoTB` - Python-based HDL verification
 * `Yosys` - RTL synthesis
-* `OpenLane 2` - ASIC RTL-to-GDS flow
+* `OpenLane 2` - ASIC RTL-to-GDSII flow
 * `OpenSTA` - Static timing analysis, included through OpenLane
 * `OpenROAD` - Place-and-route, included through OpenLane
 * `GTKWave` or `Surfer` - Waveform viewing (Either works well)
