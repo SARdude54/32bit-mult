@@ -1,0 +1,624 @@
+OpenLane run: runs/recent
+antenna reports: 7
+metrics json files: 188
+DEF files: 21
+Verilog files: 32
+
+=== Antenna Metrics by Step ===
+
+[runs/recent/38-openroad-globalrouting/or_metrics_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+
+[runs/recent/38-openroad-globalrouting/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+
+[runs/recent/39-openroad-checkantennas/or_metrics_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+
+[runs/recent/39-openroad-checkantennas/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+
+[runs/recent/39-openroad-checkantennas/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  route__antenna_violation__count: 1
+
+[runs/recent/40-openroad-repairdesignpostgrt/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  route__antenna_violation__count: 1
+
+[runs/recent/40-openroad-repairdesignpostgrt/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  route__antenna_violation__count: 1
+
+[runs/recent/41-odb-diodesonports/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  route__antenna_violation__count: 1
+
+[runs/recent/41-odb-diodesonports/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  route__antenna_violation__count: 1
+
+[runs/recent/42-openroad-repairantennas/1-diodeinsertion/or_metrics_out.json]
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+
+[runs/recent/42-openroad-repairantennas/1-diodeinsertion/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  route__antenna_violation__count: 1
+
+[runs/recent/42-openroad-repairantennas/1-diodeinsertion/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/42-openroad-repairantennas/2-openroad-checkantennas/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/42-openroad-repairantennas/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  route__antenna_violation__count: 1
+
+[runs/recent/43-openroad-resizertimingpostgrt/or_metrics_out.json]
+  design__instance__count__class:antenna_cell: 2
+
+[runs/recent/45-openroad-detailedrouting/or_metrics_out.json]
+  design__instance__count__class:antenna_cell: 2
+
+[runs/recent/47-openroad-checkantennas-1/or_metrics_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+
+[runs/recent/47-openroad-checkantennas-1/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/48-checker-trdrc/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/48-checker-trdrc/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/49-odb-reportdisconnectedpins/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/49-odb-reportdisconnectedpins/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/50-checker-disconnectedpins/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/50-checker-disconnectedpins/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/51-odb-reportwirelength/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/51-odb-reportwirelength/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/52-checker-wirelength/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/52-checker-wirelength/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/53-openroad-fillinsertion/or_metrics_out.json]
+  design__instance__count__class:antenna_cell: 2
+
+[runs/recent/53-openroad-fillinsertion/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/53-openroad-fillinsertion/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/54-odb-cellfrequencytables/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/54-odb-cellfrequencytables/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/55-openroad-rcx/or_metrics_out.json]
+  design__instance__count__class:antenna_cell: 2
+
+[runs/recent/55-openroad-rcx/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/55-openroad-rcx/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/56-openroad-stapostpnr/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/56-openroad-stapostpnr/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/57-openroad-irdropreport/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/57-openroad-irdropreport/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/58-magic-streamout/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/58-magic-streamout/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/59-klayout-streamout/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/59-klayout-streamout/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/60-magic-writelef/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/60-magic-writelef/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/61-odb-checkdesignantennaproperties/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/61-odb-checkdesignantennaproperties/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/62-klayout-xor/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/62-klayout-xor/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/63-checker-xor/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/63-checker-xor/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/64-magic-drc/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/64-magic-drc/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/65-klayout-drc/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/65-klayout-drc/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/66-checker-magicdrc/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/66-checker-magicdrc/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/67-checker-klayoutdrc/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/67-checker-klayoutdrc/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/68-magic-spiceextraction/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/68-magic-spiceextraction/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/69-checker-illegaloverlap/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/69-checker-illegaloverlap/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/70-netgen-lvs/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/70-netgen-lvs/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/71-checker-lvs/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/71-checker-lvs/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/72-checker-setupviolations/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/72-checker-setupviolations/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/73-checker-holdviolations/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/73-checker-holdviolations/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/74-checker-maxslewviolations/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/74-checker-maxslewviolations/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/75-checker-maxcapviolations/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/75-checker-maxcapviolations/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/76-misc-reportmanufacturability/state_in.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+[runs/recent/76-misc-reportmanufacturability/state_out.json]
+  antenna__violating__nets: 1
+  antenna__violating__pins: 1
+  antenna_diodes_count: 2
+  design__instance__count__class:antenna_cell: 2
+  route__antenna_violation__count: 1
+
+=== Antenna Reports ===
+
+--- 38-openroad-globalrouting/antenna.rpt ---
+  [INFO ANT-0002] Found 1 net violations.
+  [INFO ANT-0001] Found 1 pin violations.
+  Nets:
+    clknet_3_1__leaf_CLK
+  Pins:
+    net=clknet_3_1__leaf_CLK pin=_11023_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=_11024_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=_11074_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=_11075_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=_11076_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=_11077_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=_11078_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=clkload1/A (sky130_fd_sc_hd__clkinv_4)
+
+--- 39-openroad-checkantennas/reports/antenna.rpt ---
+  [INFO ANT-0002] Found 1 net violations.
+  [INFO ANT-0001] Found 1 pin violations.
+  Nets:
+    clknet_3_1__leaf_CLK
+  Pins:
+    net=clknet_3_1__leaf_CLK pin=_11023_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=_11024_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=_11074_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=_11075_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=_11076_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=_11077_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=_11078_/CLK (sky130_fd_sc_hd__dfxtp_1)
+    net=clknet_3_1__leaf_CLK pin=clkload1/A (sky130_fd_sc_hd__clkinv_4)
+
+--- 39-openroad-checkantennas/reports/antenna_summary.rpt ---
+  Summary rows:
+    net=clknet_3_1__leaf_CLK pin=_11024_/CLK layer=met1 partial=460.97 required=400.00 P/R=1.15
+
+--- 42-openroad-repairantennas/2-openroad-checkantennas/reports/antenna.rpt ---
+  [INFO ANT-0002] Found 0 net violations.
+  [INFO ANT-0001] Found 0 pin violations.
+
+--- 42-openroad-repairantennas/2-openroad-checkantennas/reports/antenna_summary.rpt ---
+  No explicit violations found in this report.
+
+--- 47-openroad-checkantennas-1/reports/antenna.rpt ---
+  [INFO ANT-0002] Found 1 net violations.
+  [INFO ANT-0001] Found 1 pin violations.
+  Nets:
+    _01566_
+  Pins:
+    net=_01566_ pin=_05560_/B1 (sky130_fd_sc_hd__o21ai_2)
+    net=_01566_ pin=_05561_/C (sky130_fd_sc_hd__or3_1)
+
+--- 47-openroad-checkantennas-1/reports/antenna_summary.rpt ---
+  Summary rows:
+    net=_01566_ pin=_05561_/C layer=met1 partial=422.08 required=400.00 P/R=1.06
+
+=== Antenna Diode Instances in DEF ===
+Found 14 diode instance entries.
+  42-openroad-repairantennas/1-diodeinsertion/mul.def: ANTENNA_1 sky130_fd_sc_hd__diode_2
+  42-openroad-repairantennas/1-diodeinsertion/mul.def: ANTENNA_2 sky130_fd_sc_hd__diode_2
+  43-openroad-resizertimingpostgrt/mul.def: ANTENNA_1 sky130_fd_sc_hd__diode_2
+  43-openroad-resizertimingpostgrt/mul.def: ANTENNA_2 sky130_fd_sc_hd__diode_2
+  45-openroad-detailedrouting/mul.def: ANTENNA_1 sky130_fd_sc_hd__diode_2
+  45-openroad-detailedrouting/mul.def: ANTENNA_2 sky130_fd_sc_hd__diode_2
+  49-odb-reportdisconnectedpins/mul.def: ANTENNA_1 sky130_fd_sc_hd__diode_2
+  49-odb-reportdisconnectedpins/mul.def: ANTENNA_2 sky130_fd_sc_hd__diode_2
+  53-openroad-fillinsertion/mul.def: ANTENNA_1 sky130_fd_sc_hd__diode_2
+  53-openroad-fillinsertion/mul.def: ANTENNA_2 sky130_fd_sc_hd__diode_2
+  54-odb-cellfrequencytables/mul.def: ANTENNA_1 sky130_fd_sc_hd__diode_2
+  54-odb-cellfrequencytables/mul.def: ANTENNA_2 sky130_fd_sc_hd__diode_2
+  final/def/mul.def: ANTENNA_1 sky130_fd_sc_hd__diode_2
+  final/def/mul.def: ANTENNA_2 sky130_fd_sc_hd__diode_2
+
+=== Net Context ===
+
+--- Net: clknet_3_1__leaf_CLK ---
+  45-openroad-detailedrouting/mul.def:78254:     - clknet_3_1__leaf_CLK ( ANTENNA_2 DIODE ) ( clkload1 A ) ( _11023_ CLK ) ( _11024_ CLK ) ( _11074_ CLK ) ( _11075_ CLK ) ( _11076_ CLK )
+  49-odb-reportdisconnectedpins/mul.def:78254:     - clknet_3_1__leaf_CLK ( ANTENNA_2 DIODE ) ( clkload1 A ) ( _11023_ CLK ) ( _11024_ CLK ) ( _11074_ CLK ) ( _11075_ CLK ) ( _11076_ CLK )
+  42-openroad-repairantennas/1-diodeinsertion/mul.def:15918:     - clknet_3_1__leaf_CLK ( ANTENNA_2 DIODE ) ( clkload1 A ) ( _11023_ CLK ) ( _11024_ CLK ) ( _11074_ CLK ) ( _11075_ CLK ) ( _11076_ CLK )
+  53-openroad-fillinsertion/mul.def:86391:     - clknet_3_1__leaf_CLK ( ANTENNA_2 DIODE ) ( clkload1 A ) ( _11023_ CLK ) ( _11024_ CLK ) ( _11074_ CLK ) ( _11075_ CLK ) ( _11076_ CLK )
+  34-openroad-cts/mul.def:15914:     - clknet_3_1__leaf_CLK ( clkload1 A ) ( _11023_ CLK ) ( _11024_ CLK ) ( _11074_ CLK ) ( _11075_ CLK ) ( _11076_ CLK ) ( _11077_ CLK )
+  40-openroad-repairdesignpostgrt/mul.def:15916:     - clknet_3_1__leaf_CLK ( clkload1 A ) ( _11023_ CLK ) ( _11024_ CLK ) ( _11074_ CLK ) ( _11075_ CLK ) ( _11076_ CLK ) ( _11077_ CLK )
+  36-openroad-resizertimingpostcts/mul.def:15914:     - clknet_3_1__leaf_CLK ( clkload1 A ) ( _11023_ CLK ) ( _11024_ CLK ) ( _11074_ CLK ) ( _11075_ CLK ) ( _11076_ CLK ) ( _11077_ CLK )
+  final/def/mul.def:86391:     - clknet_3_1__leaf_CLK ( ANTENNA_2 DIODE ) ( clkload1 A ) ( _11023_ CLK ) ( _11024_ CLK ) ( _11074_ CLK ) ( _11075_ CLK ) ( _11076_ CLK )
+  38-openroad-globalrouting/mul.def:15916:     - clknet_3_1__leaf_CLK ( clkload1 A ) ( _11023_ CLK ) ( _11024_ CLK ) ( _11074_ CLK ) ( _11075_ CLK ) ( _11076_ CLK ) ( _11077_ CLK )
+  43-openroad-resizertimingpostgrt/mul.def:15918:     - clknet_3_1__leaf_CLK ( ANTENNA_2 DIODE ) ( clkload1 A ) ( _11023_ CLK ) ( _11024_ CLK ) ( _11074_ CLK ) ( _11075_ CLK ) ( _11076_ CLK )
+  54-odb-cellfrequencytables/mul.def:86391:     - clknet_3_1__leaf_CLK ( ANTENNA_2 DIODE ) ( clkload1 A ) ( _11023_ CLK ) ( _11024_ CLK ) ( _11074_ CLK ) ( _11075_ CLK ) ( _11076_ CLK )
+  45-openroad-detailedrouting/mul.nl.v:5667:  wire clknet_3_1__leaf_CLK;
+  45-openroad-detailedrouting/mul.nl.v:27425:  sky130_fd_sc_hd__dfxtp_1 _11023_ (.CLK(clknet_3_1__leaf_CLK),
+  45-openroad-detailedrouting/mul.nl.v:27428:  sky130_fd_sc_hd__dfxtp_1 _11024_ (.CLK(clknet_3_1__leaf_CLK),
+  45-openroad-detailedrouting/mul.nl.v:27578:  sky130_fd_sc_hd__dfxtp_1 _11074_ (.CLK(clknet_3_1__leaf_CLK),
+  45-openroad-detailedrouting/mul.nl.v:27581:  sky130_fd_sc_hd__dfxtp_1 _11075_ (.CLK(clknet_3_1__leaf_CLK),
+  45-openroad-detailedrouting/mul.nl.v:27584:  sky130_fd_sc_hd__dfxtp_1 _11076_ (.CLK(clknet_3_1__leaf_CLK),
+  45-openroad-detailedrouting/mul.nl.v:27587:  sky130_fd_sc_hd__dfxtp_1 _11077_ (.CLK(clknet_3_1__leaf_CLK),
+  45-openroad-detailedrouting/mul.nl.v:27590:  sky130_fd_sc_hd__dfxtp_1 _11078_ (.CLK(clknet_3_1__leaf_CLK),
+  45-openroad-detailedrouting/mul.nl.v:29701:     .X(clknet_3_1__leaf_CLK));
+
+--- Net: _01566_ ---
+  23-openroad-globalplacementskipio/mul.def:11871:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  31-openroad-repairdesignpostgpl/mul.def:11956:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  45-openroad-detailedrouting/mul.def:30513:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL
+  13-openroad-floorplan/mul.def:10815:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  49-odb-reportdisconnectedpins/mul.def:30513:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL
+  15-odb-setpowerconnections/mul.def:10815:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  42-openroad-repairantennas/1-diodeinsertion/mul.def:11968:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  53-openroad-fillinsertion/mul.def:38650:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL
+  20-openroad-generatepdn/mul.def:11871:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  34-openroad-cts/mul.def:11964:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  40-openroad-repairdesignpostgrt/mul.def:11966:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  36-openroad-resizertimingpostcts/mul.def:11964:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  final/def/mul.def:38650:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL
+  38-openroad-globalrouting/mul.def:11966:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  24-openroad-ioplacement/mul.def:12273:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  17-openroad-cutrows/mul.def:10815:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  43-openroad-resizertimingpostgrt/mul.def:11968:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  54-odb-cellfrequencytables/mul.def:38650:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL
+  18-openroad-tapendcapinsertion/mul.def:13137:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
+  33-openroad-detailedplacement/mul.def:11956:     - _01566_ ( _05561_ C ) ( _05560_ B1 ) ( _05559_ Y ) + USE SIGNAL ;
