@@ -5,11 +5,7 @@ RTL_SRCS 	:= $(shell find rtl -name '*.sv' -or -name '*.v')
 INCLUDE_DIRS := $(sort $(dir $(shell find . -name '*.svh')))
 RTL_DIRS	 := $(sort $(dir $(RTL_SRCS)))
 # Include both Include and RTL directories for linting
-LINT_INCLUDES := $(foreach dir, $(INCLUDE_DIRS) $(RTL_DIRS), -I$(realpath $(dir)))
-ifneq ($(strip $(PDKPATH)),)
-LINT_INCLUDES += -I$(PDKPATH)
-endif
-
+LINT_INCLUDES := $(foreach dir, $(INCLUDE_DIRS) $(RTL_DIRS), -I$(realpath $(dir))) -I$(PDKPATH) 
 
 TEST_DIR = ./tests
 TEST_SUBDIRS = $(shell cd $(TEST_DIR) && ls -d */ | grep -v "__pycache__" )
@@ -19,7 +15,8 @@ TESTS = $(TEST_SUBDIRS:/=)
 LINTER := verilator
 SIMULATOR := verilator
 SIMULATOR_ARGS := --binary --timing --trace --trace-structs \
-	--assert --timescale 1ns  
+	--assert --timescale 1ns \
+	-CFLAGS "-std=c++20 -fcoroutines"
 SIMULATOR_BINARY := ./obj_dir/V*
 SIMULATOR_SRCS := *.sv
 # Optional use of Icarus as Linter and Simulator
@@ -28,13 +25,13 @@ SIMULATOR := iverilog
 SIMULATOR_ARGS := -g2012
 SIMULATOR_BINARY := a.out
 SIMULATOR_SRCS := $(foreach src, $(RTL_SRCS), $(realpath $(src))) *.sv
-SIM_TOP := $(shell bash $(shell pwd)/scripts/top.sh -s)
+SIM_TOP := `$(shell pwd)/scripts/top.sh -s`
 # LINT_INCLUDES := ""
 endif
 # Gate Level Verification
 ifdef GL
 SIMULATOR := iverilog
-LINT_INCLUDES := $(foreach dir, $(INCLUDE_DIRS) $(RTL_DIRS), -I$(realpath $(dir)))
+LINT_INCLUDES := -I$(PDKPATH) -I$(realpath gl)
 SIMULATOR_ARGS := -g2012 -DFUNCTIONAL -DUSE_POWER_PINS 
 SIMULATOR_BINARY := a.out
 SIMULATOR_SRCS = $(realpath gl)/* *.sv
@@ -103,7 +100,7 @@ $(TESTS):
 
 # Build With Simulator
 	@cd $(TEST_DIR)/$@;\
-		$(SIMULATOR) $(SIMULATOR_ARGS) $(LINT_INCLUDES) $(SIM_TOP) $(SIMULATOR_SRCS) > build.log
+		$(SIMULATOR) $(SIMULATOR_ARGS) $(SIMULATOR_SRCS) $(LINT_INCLUDES) $(SIM_TOP) > build.log
 	
 	@printf "\n$(BOLD) Running... $(RESET)\n"
 
@@ -126,6 +123,7 @@ cocotests:
 	@$(foreach test,  $(COCOTESTS), make -sC $(COCOTEST_DIR)/$(test);)
 
 OPENLANE_CONF ?= config.*
+
 openlane:
 	@`which openlane` --flow Classic $(OPENLANE_CONF)
 	@cd runs && rm -f recent && ln -sf `ls | tail -n 1` recent
@@ -136,8 +134,38 @@ openlane:
 
 FORCE: ;
 
+# ----------------------------------------------------------------------
+# OpenROAD GUI loader
+# ----------------------------------------------------------------------
+
+OPENROAD      ?= openroad
+OPENROAD_TCL  ?= scripts/openroad_load.tcl
+RUN_DIR       ?= runs/recent
+LIB_CORNER    ?=
+
+.PHONY: openroad
 openroad:
-	scripts/openroad_launch.sh | openroad
+	@test -f "$(OPENROAD_TCL)" || \
+		{ echo "ERROR: OpenROAD Tcl loader not found: $(OPENROAD_TCL)"; exit 1; }
+	@test -d "$(RUN_DIR)" || \
+		{ echo "ERROR: OpenLane run directory not found: $(RUN_DIR)"; exit 1; }
+	@echo "Launching OpenROAD GUI..."
+	@echo "  Run directory: $(RUN_DIR)"
+	@if [ -n "$(LIB_CORNER)" ]; then \
+		RUN_DIR="$(RUN_DIR)" \
+		LIB_CORNER="$(LIB_CORNER)" \
+		$(OPENROAD) -gui "$(OPENROAD_TCL)"; \
+	else \
+		RUN_DIR="$(RUN_DIR)" \
+		$(OPENROAD) -gui "$(OPENROAD_TCL)"; \
+	fi
+
+.PHONY: clean
+clean:
+	rm -f `find tests -iname "*.vcd"`
+	rm -f `find tests -iname "a.out"`
+	rm -f `find tests -iname "*.log"`
+	rm -rf `find tests -iname "obj_dir"`
 
 .PHONY: clean
 clean:

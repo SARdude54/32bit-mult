@@ -123,6 +123,7 @@ cocotests:
 	@$(foreach test,  $(COCOTESTS), make -sC $(COCOTEST_DIR)/$(test);)
 
 OPENLANE_CONF ?= config.*
+
 openlane:
 	@`which openlane` --flow Classic $(OPENLANE_CONF)
 	@cd runs && rm -f recent && ln -sf `ls | tail -n 1` recent
@@ -133,8 +134,38 @@ openlane:
 
 FORCE: ;
 
+# ----------------------------------------------------------------------
+# OpenROAD GUI loader
+# ----------------------------------------------------------------------
+
+OPENROAD      ?= openroad
+OPENROAD_TCL  ?= scripts/openroad_load.tcl
+RUN_DIR       ?= runs/recent
+LIB_CORNER    ?=
+
+.PHONY: openroad
 openroad:
-	scripts/openroad_launch.sh | openroad
+	@test -f "$(OPENROAD_TCL)" || \
+		{ echo "ERROR: OpenROAD Tcl loader not found: $(OPENROAD_TCL)"; exit 1; }
+	@test -d "$(RUN_DIR)" || \
+		{ echo "ERROR: OpenLane run directory not found: $(RUN_DIR)"; exit 1; }
+	@echo "Launching OpenROAD GUI..."
+	@echo "  Run directory: $(RUN_DIR)"
+	@if [ -n "$(LIB_CORNER)" ]; then \
+		RUN_DIR="$(RUN_DIR)" \
+		LIB_CORNER="$(LIB_CORNER)" \
+		$(OPENROAD) -gui "$(OPENROAD_TCL)"; \
+	else \
+		RUN_DIR="$(RUN_DIR)" \
+		$(OPENROAD) -gui "$(OPENROAD_TCL)"; \
+	fi
+
+.PHONY: clean
+clean:
+	rm -f `find tests -iname "*.vcd"`
+	rm -f `find tests -iname "a.out"`
+	rm -f `find tests -iname "*.log"`
+	rm -rf `find tests -iname "obj_dir"`
 
 .PHONY: clean
 clean:
