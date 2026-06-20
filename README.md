@@ -5,7 +5,7 @@ This project implements different 32-bit multiplier algorithms in digital design
 Currently, this project has three different implementations:
 
 * Default `*` operator in SystemVerilog
-* Binary Multiplication
+* Radix-2 Pipelined Multiplication
 * Radix-4 Multiplication
 
 ## Toolchain
@@ -40,8 +40,8 @@ Currently, this project is organized as three separate multiplier implementation
 
 ```text
 def_mult/   # RTL-inferred SystemVerilog '*' multiplier
-bin_mult/   # Binary shift-and-add multiplier
-radix4/     # Radix-4 Booth multiplier
+radix2_mul/   # Radix-2 pipelineed multiplier
+radix4_mul/     # Radix-4 Booth multiplier
 ```
 
 
@@ -172,7 +172,7 @@ Replace `/path/to/sky130A` with the actual local PDK installation path.
 
 ### Verify the Full Toolchain
 
-From a multiplier directory, such as `radix4/`, run:
+From a multiplier directory, such as `radix4_mul/`, run:
 
 ```bash
 verilator --version
@@ -190,7 +190,7 @@ A successful result from each tool and a non-empty `PDKPATH` indicate that the r
 Run the following commands from one multiplier directory:
 
 ```bash
-cd radix4
+cd radix4_mul
 ```
 
 ### RTL Linting
@@ -384,8 +384,8 @@ obj_dir/
     ```    
     python3 scripts/collect_metrics.py \
         --design default:def_mult/runs/recent \
-        --design radix4:radix4/runs/recent \
-        --design bin_mult:bin_mult/runs/recent \
+        --design radix4_mul:radix4/runs/recent \
+        --design radix2_mul:bin_mult/runs/recent \
         --out-csv results/metrics_summary.csv \
         --out-json results/metrics_summary.json
     ```
@@ -440,7 +440,7 @@ Use `antenna_debug.py` to review antenna violation information for debugging.
 
 ## Multiplier Results
 ### Default Multiplication
-### Binary Multiplication
+### Radix-2 Pipelined Multiplication
 ### Radix-4 Multiplication
 
 ## References
