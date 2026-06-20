@@ -1,5 +1,7 @@
 `timescale 1ps/1ps
 
+`default_nettype none
+
 module TB_mul;
 
     logic        CLK;
@@ -14,9 +16,21 @@ module TB_mul;
     logic vld_out;
     logic rdy_out;
 
-    localparam integer TIMEOUT_CYCLES = 100;
+    localparam integer TIMEOUT_CYCLES = 1000;
+
+    `ifdef USE_POWER_PINS
+        supply1 VPWR;
+        supply1 VPB;
+        supply0 VGND;
+        supply0 VNB;
+    `endif
 
     mul DUT (
+    `ifdef USE_POWER_PINS
+        .VPWR(VPWR),
+        .VGND(VGND),
+    `endif
+
         .clk     (CLK),
         .rst_n   (rst_n),
 
@@ -35,7 +49,7 @@ module TB_mul;
         CLK = 1'b0;
     end
 
-    always #5 CLK = ~CLK;
+    always #10000 CLK = ~CLK;
 
     initial begin
         $dumpfile("wave.vcd");
@@ -170,7 +184,7 @@ module TB_mul;
         rdy_out = 1'b0;
 
         // Keep reset asserted across four active clock edges.
-        repeat (4) @(posedge CLK);
+        repeat (20) @(posedge CLK);
 
         // Release reset away from the DUTs sampling edge.
         @(negedge CLK);
@@ -199,3 +213,5 @@ module TB_mul;
     end
 
 endmodule
+
+`default_nettype wire

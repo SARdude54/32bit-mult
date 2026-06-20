@@ -1,10 +1,13 @@
 {
     "DESIGN_NAME": "mul",
-    "VERILOG_FILES": ["dir::rtl/mul.sv"],
+
+    "VERILOG_FILES": [
+        "dir::rtl/mul.sv"
+    ],
     "VERILOG_DEFINES": ["USE_POWER_PINS"],
 
     "CLOCK_PERIOD": 30,
-    "CLOCK_PORT": "CLK",
+    "CLOCK_PORT": "clk",
 
     "PNR_SDC_FILE": "dir::constraints/mul.sdc",
     "SIGNOFF_SDC_FILE": "dir::constraints/mul.sdc",

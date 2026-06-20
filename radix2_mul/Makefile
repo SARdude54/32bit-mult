@@ -36,10 +36,23 @@ endif
 # Gate Level Verification
 ifdef GL
 SIMULATOR := iverilog
-LINT_INCLUDES := -I$(PDKPATH) -I$(realpath gl)
-SIMULATOR_ARGS := -g2012 -DFUNCTIONAL -DUSE_POWER_PINS 
+SIMULATOR_ARGS := -g2012 -DFUNCTIONAL -DUSE_POWER_PINS
 SIMULATOR_BINARY := a.out
-SIMULATOR_SRCS = $(realpath gl)/* *.sv
+
+GL_DIR := $(CURDIR)/gl
+GL_NETLISTS := $(wildcard $(GL_DIR)/*.v)
+
+LINT_INCLUDES := -I$(PDKPATH) -I$(GL_DIR) -I$(CURDIR)/scripts
+
+# Compile order:
+#   1. gatelevel.vh includes sky130 primitive/cell models
+#   2. final gate-level netlist from OpenLane
+#   3. testbench in the test directory
+SIMULATOR_SRCS := $(CURDIR)/scripts/gatelevel.vh $(GL_NETLISTS) *.sv
+
+# Icarus top-module selection.
+# Assumes test directory name == testbench module name, e.g. tests/bin_mult_tb/bin_mult_tb.sv.
+SIM_TOP = -s $@
 endif
 
 LINT_OPTS += --lint-only --timing $(LINT_INCLUDES)
@@ -90,13 +103,17 @@ tests/%: FORCE
 itests: 
 	@ICARUS=1 make tests
 
+.PHONY: gl gl_tests
+gl: gl_tests
+
 gl_tests:
+	@rm -rf gl
 	@mkdir -p gl
-	@cp runs/recent/final/pnl/* gl/
-	@cat scripts/gatelevel.vh gl/*.v > gl/temp
-	@mv -f gl/temp gl/*.v
-	@rm -f gl/temp
-	@GL=1 make tests
+	@test -d runs/recent/final/pnl || \
+		{ echo "$(RED)ERROR: runs/recent/final/pnl does not exist. Run OpenLane first.$(RESET)"; exit 1; }
+	@cp runs/recent/final/pnl/*.v gl/
+	@echo "$(GREEN)Copied gate-level netlist(s) into gl/$(RESET)"
+	@GL=1 $(MAKE) tests
 
 .PHONY: $(TESTS)
 $(TESTS): 

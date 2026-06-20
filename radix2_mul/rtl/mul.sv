@@ -1,6 +1,14 @@
 `timescale 1ps/1ps
 
+`default_nettype none
+
 module mul (
+
+    `ifdef USE_POWER_PINS
+        inout wire VPWR, 
+        inout wire VGND,
+    `endif
+
     input  logic        clk,
     input  logic        rst_n,
 
@@ -164,3 +172,4 @@ module mul (
 
 endmodule
 
+`default_nettype wire
