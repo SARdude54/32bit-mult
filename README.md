@@ -385,7 +385,7 @@ obj_dir/
     python3 scripts/collect_metrics.py \
         --design default:def_mult/runs/recent \
         --design radix4_mul:radix4/runs/recent \
-        --design radix2_mul:bin_mult/runs/recent \
+        --design radix2_mul:radix2_mult/runs/recent \
         --out-csv results/metrics_summary.csv \
         --out-json results/metrics_summary.json
     ```
