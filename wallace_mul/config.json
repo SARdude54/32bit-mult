@@ -1,0 +1,37 @@
+{
+    "DESIGN_NAME": "mul",
+
+    "VERILOG_FILES": [
+        "dir::rtl/pipe_stage.sv",
+        "dir::rtl/mul.sv"
+    ],
+
+    "CLOCK_PERIOD": 20,
+    "CLOCK_PORT": "clk",
+
+    "PNR_SDC_FILE": "dir::constraints/mul.sdc",
+    "SIGNOFF_SDC_FILE": "dir::constraints/mul.sdc",
+
+    "FP_PDN_VOFFSET": 7,
+    "FP_PDN_HOFFSET": 7,
+    "FP_PDN_SKIPTRIM": true,
+
+    "FP_CORE_UTIL": 38,
+
+    "RUN_POST_GRT_RESIZER_TIMING": true,
+    "RUN_POST_GRT_DESIGN_REPAIR": true,
+
+    "RUN_HEURISTIC_DIODE_INSERTION": true,
+    "DIODE_ON_PORTS": "none",
+    "HEURISTIC_ANTENNA_THRESHOLD": 225,
+    "DIODE_PADDING": 2,
+
+    "GRT_REPAIR_ANTENNAS": true,
+    "GRT_ANTENNA_ITERS": 30,
+    "GRT_ANTENNA_MARGIN": 0,
+
+    "RUN_ANTENNA_REPAIR": true,
+
+    "PL_RESIZER_MAX_WIRE_LENGTH": 100,
+    "GLB_RESIZER_MAX_WIRE_LENGTH": 100
+}
